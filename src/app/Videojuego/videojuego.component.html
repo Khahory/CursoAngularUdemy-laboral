@@ -1,7 +1,25 @@
 <h2>{{titulo}}</h2>
+
+<!--Datos sincronizados-->
+<input type="text" [(ngModel)]="newJuego"> <br>
+<button (click)="pushGame()">Agregar a la lista</button>
+<br>
+<strong>{{newJuego}}</strong>
+<p>Lista de los nombres</p>
+<ul>
+  <li *ngFor="let i of nameJuegos; ">
+    <strong>{{i}}</strong>
+  </li>
+</ul>
+<hr><br>
+<!-- END Datos sincronizados-->
+
+
+
 <p>{{listado}}</p>
 <ul>
-  <li *ngFor="let i of juegos">{{i.nombre}} con un precio de <strong>{{i.precio}}$  </strong>
+  <li *ngFor="let i of juegos">
+    {{i.nombre}} con un precio de <strong>{{i.precio}}$  </strong>
     <span *ngIf="i.precio <= 50"
           [style.background]="i.precio < 10 ? 'green' : 'transparent'"
     > EN OFERTA!! (precio < 10)</span>
