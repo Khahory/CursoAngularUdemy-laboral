@@ -11,8 +11,10 @@ export class VideojuegoComponent implements OnInit, OnDestroy, DoCheck {
   private titulo: string;
   private listado: string;
   private juegos: Array<Juego>;
+  private color: string;
 
   constructor() {
+    this.color = 'blue';
     this.titulo = 'Componente de Videojuego (dinamico)';
     this.listado = 'Listado de los mas populares (dinamico)';
     // console.log('Se cargo mi primero componente');

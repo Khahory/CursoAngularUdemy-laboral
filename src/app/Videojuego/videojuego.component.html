@@ -7,3 +7,18 @@
     > EN OFERTA!! (precio < 10)</span>
   </li>
 </ul>
+
+<hr><br><br>
+
+<p>Jugando con Swich-case directiva</p>
+<ul [ngSwitch]="color" >
+  <li *ngSwitchCase="'yellow'">
+    Mi color fav es el: <span [ngStyle]="{'background': color}">Amarillo</span>
+  </li>
+  <li *ngSwitchCase="'blue'">
+    Mi color fav es el: <span [ngStyle]="{'background': color}">Azul</span>
+  </li>
+  <li *ngSwitchCase="'red'">
+    Mi color fav es el: <span [ngStyle]="{'background': color}">Rojo</span>
+  </li>
+</ul>
