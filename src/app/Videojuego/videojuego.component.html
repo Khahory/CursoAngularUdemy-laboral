@@ -1,7 +1,9 @@
-
-
 <h2>{{titulo}}</h2>
 <p>{{listado}}</p>
 <ul>
-  <li *ngFor="let i of juegos">{{i.nombre}} con un precio de <strong>{{i.precio}}</strong></li>
+  <li *ngFor="let i of juegos">{{i.nombre}} con un precio de <strong>{{i.precio}}$  </strong>
+    <span *ngIf="i.precio <= 50"
+          [style.background]="i.precio < 10 ? 'green' : 'transparent'"
+    > EN OFERTA!! (precio < 10)</span>
+  </li>
 </ul>
