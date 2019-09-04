@@ -29,6 +29,7 @@
 <hr><br><br>
 
 <p>Jugando con Swich-case directiva</p>
+<input type="text" [(ngModel)]="color">
 <ul [ngSwitch]="color" >
   <li *ngSwitchCase="'yellow'">
     Mi color fav es el: <span [ngStyle]="{'background': color}">Amarillo</span>
