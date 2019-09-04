@@ -7,8 +7,9 @@
 <strong>{{newJuego}}</strong>
 <p>Lista de los nombres</p>
 <ul>
-  <li *ngFor="let i of nameJuegos; ">
-    <strong>{{i}}</strong>
+  <li *ngFor="let i of nameJuegos; let indice = index">
+    {{indice}} <strong>{{i}}</strong><br>
+    <button (click)="deleteNameGame(indice)">Eliminar elemento</button>
   </li>
 </ul>
 <hr><br>

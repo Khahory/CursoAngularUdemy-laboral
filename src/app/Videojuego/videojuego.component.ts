@@ -14,6 +14,7 @@ export class VideojuegoComponent implements OnInit {
   private color: string;
   private newJuego: string;
   private nameJuegos: string[];
+  private indexJuegos: number[];
 
   constructor() {
     // Variables
@@ -22,6 +23,7 @@ export class VideojuegoComponent implements OnInit {
     this.listado = 'Listado de los mas populares (dinamico)';
     this.newJuego = 'Zelda';
     this.nameJuegos = [];
+    this.indexJuegos = [];
     // console.log('Se cargo mi primero componente');
 
     //  Arreglo con objetos dentro
@@ -46,6 +48,7 @@ export class VideojuegoComponent implements OnInit {
       // En caso de que el indice de dos sea diferente
       if (this.nameJuegos.indexOf(valor.nombre) < 0) {
         this.nameJuegos.push(valor.nombre);
+        this.indexJuegos.push(index);
       }
     });
   }
@@ -53,4 +56,10 @@ export class VideojuegoComponent implements OnInit {
   private pushGame() {
     this.nameJuegos.push(this.newJuego);
   }
+
+//  Eliminar elemento
+  deleteNameGame(indice: number) {
+    this.nameJuegos.splice(indice, 1);
+  }
+//  End - Eliminar elemento
 }
