@@ -294,8 +294,11 @@
     }
   }
 </style>
+<!--Botone-->
+<button (click)="ocultarVideojuego(true)" *ngIf="!mostra_videoJ">Mostrar elemento videojuego</button>
+<button (click)="ocultarVideojuego(false)" *ngIf="mostra_videoJ">Ocultar elemento videojuego</button>
 
-<videojuego></videojuego>
+<videojuego *ngIf="mostra_videoJ"></videojuego>
 <app-cursos></app-cursos>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

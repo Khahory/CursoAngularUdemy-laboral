@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
    title = 'CursoAngularUdemy lel';
+  // tslint:disable-next-line:variable-name
+   private mostra_videoJ:boolean = true;
+   ocultarVideojuego(value:boolean){
+     this.mostra_videoJ = value;
+   }
 }
