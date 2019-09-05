@@ -10,6 +10,7 @@ import {CursosComponent} from './cursos/cursos.component';
 // Array de rutas
 const appRouter: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'juegos', component: VideojuegoComponent},
   {path: 'cursos', component: CursosComponent},
   {path: '**', component: HomeComponent}
