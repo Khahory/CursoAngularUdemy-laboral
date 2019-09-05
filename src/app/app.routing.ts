@@ -13,6 +13,7 @@ const appRouter: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'juegos', component: VideojuegoComponent},
   {path: 'cursos', component: CursosComponent},
+  {path: 'cursos/:nombre/:seguidores', component: CursosComponent}, // Constructor con dos parametros en cursos
   {path: '**', component: HomeComponent}
 ];
 
