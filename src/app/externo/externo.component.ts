@@ -21,6 +21,7 @@ export class ExternoComponent implements OnInit {
   }
 
   private getUser(){
+    this.user = false;
     //  Uso del servicio PeticionesService
     this._peticionesService.getUser(this.idUser).subscribe(
       result => {
