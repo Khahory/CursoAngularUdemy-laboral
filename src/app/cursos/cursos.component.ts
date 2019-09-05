@@ -15,7 +15,7 @@ export class CursosComponent implements OnInit {
   public seguidores: number;
 
   // tslint:disable-next-line:variable-name
-  constructor(private _route: ActivatedRoute, _router: Router) {}
+  constructor(private _route: ActivatedRoute, private _router: Router) {}
 
   ngOnInit() {
     this.titulo = 'Componente cursos';
@@ -27,6 +27,10 @@ export class CursosComponent implements OnInit {
       this.seguidores = params.seguidores;
       console.log(params);
     });
+  }
+
+  private goGame() {
+    this._router.navigate(['/juegos']);
   }
 
 }
