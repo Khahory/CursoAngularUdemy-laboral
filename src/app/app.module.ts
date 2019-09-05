@@ -1,22 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {routing, appRoutingProviders} from './app.routing';
 
 import { AppComponent } from './app.component';
 import {VideojuegoComponent} from './Videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {FormsModule} from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideojuegoComponent,
-    CursosComponent // Declaramos el componente
+    CursosComponent,
+    HomeComponent // Declaramos el componente
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

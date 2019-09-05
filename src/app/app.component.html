@@ -295,11 +295,12 @@
   }
 </style>
 <!--Botone-->
-<button (click)="ocultarVideojuego(true)" *ngIf="!mostra_videoJ">Mostrar elemento videojuego</button>
-<button (click)="ocultarVideojuego(false)" *ngIf="mostra_videoJ">Ocultar elemento videojuego</button>
+<!--<button (click)="ocultarVideojuego(true)" *ngIf="!mostra_videoJ">Mostrar elemento videojuego</button>-->
+<!--<button (click)="ocultarVideojuego(false)" *ngIf="mostra_videoJ">Ocultar elemento videojuego</button>-->
 
-<videojuego *ngIf="mostra_videoJ"></videojuego>
+<!--<videojuego *ngIf="mostra_videoJ"></videojuego>-->
 <!--<app-cursos></app-cursos>-->
+<router-outlet></router-outlet>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
