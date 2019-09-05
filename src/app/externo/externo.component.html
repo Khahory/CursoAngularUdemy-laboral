@@ -1,14 +1,16 @@
 <p>externo works!</p>
-
-<input type="text" [(ngModel)]="idUser" (keyup.enter)="getUser()">
+{{fecha | date: 'dd/mm/yy'}} <br>
+{{'ESTO ES MAYUSCULA, LO PONDRE MINUSCULA CON LOS PIPES' | lowercase}} <!--lowercase es un pipe-->
 <br>
+<hr>
+<input type="text" [(ngModel)]="idUser" (keyup.enter)="getUser()">
 
 <!--  Agregar efecto de carga-->
 <div *ngIf="!user">
   Cargando.....
 </div>
 
-<div *ngIf="user">
+<div class="mt-1" *ngIf="user">
   <img src="{{user.avatar}}" width="200px">
   <h2>{{user.first_name}}</h2>
 </div>

@@ -11,12 +11,14 @@ export class ExternoComponent implements OnInit {
   //  Variables
   private user: any;
   private idUser: any;
+  private fecha: any; //  Creado pipes de fecha
 
   constructor(
     private _peticionesService: PeticionesService
   ) { this.idUser = 1 }
 
   ngOnInit() {
+    this.fecha = new Date();
     this.getUser();
   }
 
