@@ -6,6 +6,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {VideojuegoComponent} from './Videojuego/videojuego.component';
 import {CursosComponent} from './cursos/cursos.component';
+import {ExternoComponent} from './externo/externo.component';
 
 // Array de rutas
 const appRouter: Routes = [
@@ -14,6 +15,7 @@ const appRouter: Routes = [
   {path: 'juegos', component: VideojuegoComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'cursos/:nombre/:seguidores', component: CursosComponent}, // Constructor con dos parametros en cursos
+  {path: 'externo', component: ExternoComponent},
   {path: '**', component: HomeComponent}
 ];
 

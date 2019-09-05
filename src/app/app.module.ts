@@ -1,24 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing, appRoutingProviders} from './app.routing';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {VideojuegoComponent} from './Videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideojuegoComponent,
     CursosComponent,
-    HomeComponent // Declaramos el componente
+    HomeComponent,
+    ExternoComponent // Declaramos el componente
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [
     appRoutingProviders
