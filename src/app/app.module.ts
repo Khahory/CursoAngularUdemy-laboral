@@ -10,13 +10,16 @@ import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 
+import {CalculadoraPipe} from './pipes/Calculadora.pipe'; // Importando el pipe
+
 @NgModule({
   declarations: [
     AppComponent,
     VideojuegoComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent // Declaramos el componente
+    ExternoComponent, // Declaramos el componente
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,

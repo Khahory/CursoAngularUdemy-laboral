@@ -1,6 +1,10 @@
 <p>externo works!</p>
 {{fecha | date: 'dd/mm/yy'}} <br>
-{{'ESTO ES MAYUSCULA, LO PONDRE MINUSCULA CON LOS PIPES' | lowercase}} <!--lowercase es un pipe-->
+{{'ESTO ES MAYUSCULA, LO PONDRE MINUSCULA CON LOS PIPES' | lowercase}} <!--lowercase es un pipe--><br>
+
+<!--    Este es mi pipe personalizado-->
+{{10 | calculadoraName: 41}}
+
 <br>
 <hr>
 <input type="text" [(ngModel)]="idUser" (keyup.enter)="getUser()">
