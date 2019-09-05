@@ -25,9 +25,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/estilos.css"
+              "src/assets/css/estilos.css",
+              "src/assets/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.bundle.js",
+              "src/assets/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
