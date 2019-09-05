@@ -1,22 +1,28 @@
 // Primero importamos el componente
 import {Component, OnInit} from '@angular/core';
-import {Juego} from '../Modules/Juego';
+import {JuegoService} from '../Services/juego.service';
+import {Juego} from '../Models/Juego';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'videojuego',
-  templateUrl: 'videojuego.component.html'
+  templateUrl: 'videojuego.component.html',
+  providers: [ // Le decimos que es un servicio de juego
+    JuegoService
+  ]
 })
 export class VideojuegoComponent implements OnInit {
   private titulo: string;
   private listado: string;
-  private juegos: Array<Juego>;
   private color: string;
   private newJuego: string;
   private nameJuegos: string[];
   private indexJuegos: number[];
+  private juegos: Array<Juego>;
 
-  constructor() {
+  // Para utilizar el service debemos ponerlo en el constructor (parametro)
+  // tslint:disable-next-line:variable-name
+  constructor(private _juegoService: JuegoService) {
     // Variables
     this.color = 'blue';
     this.titulo = 'Componente de Videojuego (dinamico)';
@@ -24,23 +30,16 @@ export class VideojuegoComponent implements OnInit {
     this.newJuego = 'Zelda';
     this.nameJuegos = [];
     this.indexJuegos = [];
-    // console.log('Se cargo mi primero componente');
-
-    //  Arreglo con objetos dentro
-    this.juegos = [
-      new Juego('GTA', 100, 'RochStar'),
-      new Juego('GTA', 200, 'RochStar'),
-      new Juego('SSMB', 80, 'Nintendo'),
-      new Juego('Samus', 5, 'Nintendo'),
-    ];
-    // console.log(this.juegos);
-    this.getGames();
-
   }
+
+
   // Hooks, evento para cuando se inicia el componente (despues del constructor)
   ngOnInit(): void {
-    // console.log('Soy el OnInit del compoente');
+    // Llamar obtener juegos
+    this.juegos = this._juegoService.getJuegos();
+    this.getGames();
   }
+
 //  Push a la lista de los juegos
   private getGames() {
   //  foreah
