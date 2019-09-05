@@ -6,3 +6,20 @@
 
 <!--  Redirigir a otro componente-->
 <button type="submit" (click)="goGame()">Ir a Juegos</button>
+<br>
+
+<hr>
+
+<!--  Usar if-else con ngTemplate-->
+<div *ngIf="activo; else noIdentificado" >
+  <p><strong>Estas identificado</strong></p>
+</div>
+
+<!--    Esto seria el else, ejecutara el template con ese id(noIdentificado)-->
+<ng-template #noIdentificado>
+  <div>
+    <label>No estas identificado</label> <br>
+    <button (click)="identificarme()">Identificarme si o si </button>
+  </div>
+</ng-template>
+<!-- FIN %% Usar if-else con ngTemplate-->

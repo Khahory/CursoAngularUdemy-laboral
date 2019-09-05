@@ -13,11 +13,13 @@ export class CursosComponent implements OnInit {
   private titulo: string;
   public nombre: string;
   public seguidores: number;
+  private activo: boolean;
 
   // tslint:disable-next-line:variable-name
   constructor(private _route: ActivatedRoute, private _router: Router) {}
 
   ngOnInit() {
+    this.activo = false;
     this.titulo = 'Componente cursos';
     // Obtener los valores que estan llegando por la URL
 
@@ -31,6 +33,11 @@ export class CursosComponent implements OnInit {
 
   private goGame() {
     this._router.navigate(['/juegos']);
+  }
+
+  // Uso del ngTemplate
+  private identificarme() {
+    this.activo = true;
   }
 
 }
