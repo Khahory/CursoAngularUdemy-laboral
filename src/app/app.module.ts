@@ -4,13 +4,14 @@ import {routing, appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import {VideojuegoComponent} from './Videojuego/videojuego.component';
-import { CursosComponent } from './cursos/cursos.component';
+import {VideojuegoComponent} from './Component/Videojuego/videojuego.component';
+import { CursosComponent } from './Component/cursos/cursos.component';
 import {FormsModule} from '@angular/forms';
-import { HomeComponent } from './home/home.component';
-import { ExternoComponent } from './externo/externo.component';
+import { HomeComponent } from './Component/home/home.component';
+import { ExternoComponent } from './Component/externo/externo.component';
 
-import {CalculadoraPipe} from './pipes/Calculadora.pipe'; // Importando el pipe
+import {CalculadoraPipe} from './pipes/Calculadora.pipe';
+import { ContactoComponent } from './Component/contacto/contacto.component'; // Importando el pipe
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {CalculadoraPipe} from './pipes/Calculadora.pipe'; // Importando el pipe
     CursosComponent,
     HomeComponent,
     ExternoComponent, // Declaramos el componente
-    CalculadoraPipe
+    CalculadoraPipe, ContactoComponent
   ],
   imports: [
     BrowserModule,

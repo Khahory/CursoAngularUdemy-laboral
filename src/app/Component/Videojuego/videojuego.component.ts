@@ -1,7 +1,7 @@
 // Primero importamos el componente
 import {Component, OnInit} from '@angular/core';
-import {JuegoService} from '../Services/juego.service';
-import {Juego} from '../Models/Juego';
+import {JuegoService} from '../../Services/juego.service';
+import {Juego} from '../../Models/Juego';
 
 @Component({
   // tslint:disable-next-line:component-selector

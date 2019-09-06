@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PeticionesService} from '../Services/peticiones.service';
+import {PeticionesService} from '../../Services/peticiones.service';
 
 @Component({
   selector: 'app-externo',
