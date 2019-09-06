@@ -11,8 +11,8 @@ import {Subscriber} from 'rxjs';
 export class CursosComponent implements OnInit {
   // Variables
   private titulo: string;
-  public nombre: string;
-  public seguidores: number;
+  private nombre: string;
+  private seguidores: number;
   private activo: boolean;
 
   // tslint:disable-next-line:variable-name

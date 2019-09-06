@@ -11,14 +11,15 @@ export class ContactoComponent implements OnInit {
   private contacto_usuario: ContactoUsuario;
 
   constructor() {
-    this.contacto_usuario = new ContactoUsuario('', '', 0);
+    this.contacto_usuario = new ContactoUsuario('', '', null);
   }
 
   ngOnInit() {
   }
 
-  private onSummit() {
+  private onSummit(form) {
     console.log(this.contacto_usuario);
+    form.reset(); //  Resetea el form cuando preciona click
   }
 
 }

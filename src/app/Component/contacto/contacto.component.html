@@ -1,14 +1,26 @@
 <p class="mb-3">contacto works!</p>
 
 <!--    Los NAME son obligatorios ponerlos en las etiquetas-->
-<form #formContacto="ngForm" (ngSubmit)="onSummit()">
+<form #formContacto="ngForm" (ngSubmit)="onSummit(formContacto)">
   <label class="mb-1"> Nombre del contacto</label><br>
-  <input class="mb-3" name="nombre" type="text" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre"/><br>
+  <input class="mb-3" name="nombre" type="text" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre" required=""
+  pattern="[a-zA-Z]+">
+    <span *ngIf="!nombre.valid && nombre.touched">
+      El nombre es obligatorio
+    </span> <br>
 
   <label class="mb-1"> Apellido del contacto</label><br>
-  <input class="mb-3" name="apellido" type="text" #apellido="ngModel" [(ngModel)]="contacto_usuario.apellido"><br>
+  <input class="mb-3" name="apellido" type="text" #apellido="ngModel" [(ngModel)]="contacto_usuario.apellido" required=""
+         pattern="[a-zA-Z]+">
+  <span *ngIf="!apellido.valid && apellido.touched">
+      El apellido es obligatorio
+    </span> <br>
 
   <label class="mb-1"> Edad del contacto</label><br>
-  <input class="mb-3" name="edad" type="number" #edad="ngModel" [(ngModel)]="contacto_usuario.edad"/><br>
-  <input type="submit" value="Enviar">
+  <input class="mb-3" name="edad" type="number" #edad="ngModel" [(ngModel)]="contacto_usuario.edad" required="">
+  <span *ngIf="!edad.valid && edad.touched">
+      La edad es obligatorio
+    </span> <br>
+
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
 </form>
