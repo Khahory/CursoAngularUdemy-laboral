@@ -1,4 +1,21 @@
-<p>externo works!</p>
+<p style="background: red">externo works!</p>
+<div class="mb-3"> <!--   Creando formulario crear usuarios con la api-->
+  <form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <p>
+      <label >Nombre: </label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="new_usuario.name" required="">
+    </p>
+    <p>
+      <label >Job: </label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="new_usuario.job" required="">
+    </p>
+    <input type="submit" value="Guardar usuario" [disabled]="!new_usuario">
+  </form>
+  <label class="m-2">{{save_user.name}}</label>
+  <label class="m-2">{{save_user.job}}</label>
+</div>
+<hr>
+
 {{fecha | date: 'dd/mm/yy'}} <br>
 {{'ESTO ES MAYUSCULA, LO PONDRE MINUSCULA CON LOS PIPES' | lowercase}} <!--lowercase es un pipe--><br>
 

@@ -21,5 +21,4 @@ export class ContactoComponent implements OnInit {
     console.log(this.contacto_usuario);
     form.reset(); //  Resetea el form cuando preciona click
   }
-
 }
