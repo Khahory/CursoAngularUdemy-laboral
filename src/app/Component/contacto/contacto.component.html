@@ -1,1 +1,14 @@
-<p>contacto works!</p>
+<p class="mb-3">contacto works!</p>
+
+<!--    Los NAME son obligatorios ponerlos en las etiquetas-->
+<form #formContacto="ngForm" (ngSubmit)="onSummit()">
+  <label class="mb-1"> Nombre del contacto</label><br>
+  <input class="mb-3" name="nombre" type="text" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre"/><br>
+
+  <label class="mb-1"> Apellido del contacto</label><br>
+  <input class="mb-3" name="apellido" type="text" #apellido="ngModel" [(ngModel)]="contacto_usuario.apellido"><br>
+
+  <label class="mb-1"> Edad del contacto</label><br>
+  <input class="mb-3" name="edad" type="number" #edad="ngModel" [(ngModel)]="contacto_usuario.edad"/><br>
+  <input type="submit" value="Enviar">
+</form>
